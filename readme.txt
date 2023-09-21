@@ -12,9 +12,9 @@ Pour la réussite de l'installation de ce plugin, veuillez vous assurer que wooc
 
 
 
-Requires at least: 4.4
-Tested up to: 5.7.2
-Requires PHP: 5.6
+Requires at wordpress: 5.9.2
+Tested woocommerce up to: 6.3.1
+Requires PHP: 7.3.2
 Stable tag: 2.3.16
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
