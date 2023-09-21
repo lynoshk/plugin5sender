@@ -1,10 +1,16 @@
 === 5sender SMS Woocommerce ===
 Contributors: Lynos HK 
 Site:https://lynoshk229.com/
+Tags: sms woocommerce, sms marketing, sms notification 
 
+== Description ==
+Plugin de notification d'achat et de commande woocommerce.
+
+
+== Installation ==
 Pour la réussite de l'installation de ce plugin, veuillez vous assurer que woocommerce est bien intallé.
 
-Tags: sms woocommerce, sms marketing, sms notification 
+
 
 Requires at least: 4.4
 Tested up to: 5.7.2

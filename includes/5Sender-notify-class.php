@@ -10,7 +10,7 @@
 if (!class_exists('WC_5Sender_Integration')):
     class WC_5Sender_Integration extends WC_Integration
 {
-         /**
+        /**
          * Init and hook in the integration.
          */
         public function __construct()
@@ -72,7 +72,7 @@ if (!class_exists('WC_5Sender_Integration')):
                     'desc_tip' => true,
                     'default' => 'MimiShop',
                     'css' => 'width:2O0px;',
-                     'maxlength' => '11',                   
+                    'maxlength' => '11',
 
                 ),
                 'customer_message' => array(
@@ -83,7 +83,7 @@ if (!class_exists('WC_5Sender_Integration')):
                     'css' => 'width:400px; height: 100px;',
                     'maxlength' => 150,
                 ),
-                 'admin_notify' => array(
+                'admin_notify' => array(
                     'title' => __('Ma_boutique_notification', 'Recevoir une notification sms d\'une nouvelle commande'),
                     'type' => 'checkbox',
                     'label' => __('Recevoir une notification sms d\'une nouvelle commande', 'Recevoir une notification sms d\'une nouvelle commande'),
@@ -99,9 +99,28 @@ if (!class_exists('WC_5Sender_Integration')):
                     'css' => 'width:2O0px;',
                 ),
             );
+            if (strlen($this->get_option('entete_message')) > 11) {
+
+                // echo($this->get_option('entete_message'));
+
+                ?>
+				<div class="error">
+					<p><?php _e('Erreur de paramètre ' . ' Nom de boutique ne doit pas dépasser 11 caractères ', '5sender sms intégration');?></p>
+				</div>
+				<?php
+    }
+            if (strlen($this->get_option('customer_message')) > 150) {
+
+                // echo ($this->get_option('customer_message'));
+
+                ?>
+				<div class="error">
+					<p><?php _e('Erreur de paramètre ' . ' le Message ne doit pas dépasser 150 caractères ', '5sender sms intégration');?></p>
+				</div>
+				<?php
+    }
 
         }
-
 
     }
 endif;
